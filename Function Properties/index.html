@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>The Function Discusion</h1>
+    <script>
+//function declare
+
+        function add(a, b){   // in the function 'a' 'b' is the parameters
+          return a + b;    //  doing the work
+        };
+          const result = add(2,5); // '2', '5' is the arguments in function
+           console.log(result);
+
+//call and run func..
+          function subtract( num1, num2 ){ 
+            console.log(7 - 2);
+
+          }
+          subtract();
+
+//play with parameters or arguments...
+        function user(name){
+            console.log(`hello: ${name}`);
+        }
+        user('deepak');
+
+// use return keyword 
+        function register(user){
+            return user + ' is registered.';
+        }
+        console.log(register('Robin'))
+
+//default params...
+        function val(x=3, y=5){
+            console.log(x*y);
+        }
+        val();
+
+// rest params... 
+        function sum(...numbers){
+            return numbers
+        } 
+        
+        console.log(sum(1,2,3,4,10))  
+//Eg2...        
+        function sum(...numbers){
+            let total = 0;
+
+         for(const num of numbers){
+            total += num;
+         }
+         return total;
+        }
+        console.log(sum(1,2,3,4,5,6))
+
+// object as params..
+        function loginUser(student){
+            return ` The user ${student.name} with the id of ${student.id} is logged in`;
+        }
+        const student ={
+            id: 34453,
+            name: 'Shardul'
+        }
+        console.log(student);
+
+// Array as params...        
+      function getRandom(arr){
+        const randomIndex = Math.floor(Math.random()*arr.length);
+
+        const items = arr[randomIndex];
+        console.log(items);
+      }
+      getRandom([1,2,3,3,4,5,25])
+
+// nested function scope..
+       function first(){
+        const x = 100;
+        function second(){
+            const y = 200;
+            console.log(x+y);
+        }
+        second();
+
+       }
+
+       first();
+
+//Eg2..
+       if(true) {
+        const x = 100;
+        if(x===100){
+            const y = 150;
+            console.log(x+y);
+        }
+        
+       }  
+// Function Declaration...
+        function addDollerSingn(value){
+            return '$' + value;
+        } 
+        console.log(addDollerSingn(150));
+        
+// Function Experssion     
+        const addPlusSign = function(value){
+            return '+' + value;
+        }  
+        console.log(addPlusSign(360));
+
+// Arrow Function...        
+        const ab = () => {
+            console.log('deepak')
+        }
+             ab();
+            
+// Function challenge..   
+//  1
+        function getCelsius(f){
+            const celsius = ((f-32) * 5) / 9;
+            return celsius;
+        } 
+        console.log(getCelsius(98));
+
+        // Use arrow function..
+        const getcelsius = (f) => (((f-32) * 5) / 9)
+        console.log(`The temp is ${getcelsius(50)} \xB0C`);
+
+// Challenge 2
+        function minMax(arr){
+            const min = Math.min(...arr);
+            const max = Math.max(...arr);
+            console.log(min);
+            console.log(max);
+        }  
+        minMax([41,2,11,5,6,32]);  
+        
+// Challenge 3  IIFE =>
+        ((length, width)=>{
+            const area = length * width;
+
+            const output = `The area of a rectangle with a length of ${length} and a width of ${width} is ${area}`
+           console.log(output);
+        })(3, 5); 
+        
+// Execution contexts 
+        const globalVariable = 'I am global';
+
+        function outerFunction(){
+           const outerVariable = 'I am from outerFunction';
+
+           function innerFunction(){
+            const innerVariable = 'I am from innerFunction';
+            console.log(innerVariable);
+            console.log(outerVariable);
+            console.log(globalVariable);
+           }
+           innerFunction();
+        }
+        outerFunction();
+        
+// The Call Stack
+
+        function first(){
+            console.log('first...');
+          sec();
+        }
+
+        function sec(){
+            console.log('second...');
+          third();
+            
+        }
+
+        function third(){
+            console.log('third...');
+            
+        }
+          first();
+           
+
+
+    </script>
+</body>
+</html>

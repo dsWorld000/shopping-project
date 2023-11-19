@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+  <h1>The Object Discusion</h1>
+    <script>
+      //Object declare:
+      const person = {
+        name: 'Deepak',
+        age: 23,
+        city: 'Ateli'
+      };
+      // Accessing properties
+
+      console.log(person.name); // Dot nation
+      console.log(person['age']); // Bracket nation
+
+      // Adding or Modifying properties
+      person.job = 'Web devloper'; // Adding
+      person['city'] = 'Delhi'; // Modifying
+
+      //Deleting properties
+      delete person.city;
+
+      // Object Methods
+      const keys = Object.keys(person);
+      const values = Object.values(person);
+      const entries = Object.entries(person);
+
+      console.log(person);
+
+      console.log(entries);
+
+      // Destructuring object and naming
+
+      //basic object destrusturing
+      const person1 = { name: 'Deepak', age: 22 };
+      const { name, age } = person1;
+      console.log(name, age);
+
+      // Default value 
+      const person2 = { name2: 'DS'};
+      const {name2, age1 = 23 } = person2
+      console.log(age1)//Default value
+
+      //defferent property name 
+
+      const employe = { firstname: 'john', lastname: 'cina'};
+      const { firstname: first, lastname: second } = employe;
+      console.log(first, second);
+
+      //Nested Object Destructuring:
+      const men = { Fname: "jakey", address: {city:'Gurugram'}};
+      const { Fname, address: {city}} = men;
+      console.log(Fname, city)
+      //Object Challenge:
+      const movies =[
+        {
+          title: "fukery returns",
+          auther: "chucha",
+          status: {
+            hit: true,
+            blockbaster: false,
+            floop: false
+          }
+        },
+        {
+          title: "jawan",
+          auther: "sharukh khan",
+          status: {
+            hit: true,
+            blockbaster: false,
+            floop: false
+          }
+        },
+        {
+          title: "Rocky or rani",
+          auther: "Ranveer singh",
+          status: {
+            hit: true,
+            blockbaster: false,
+            floop: false
+          }
+        }
+      ]
+// put blockbaster value true, all of them
+
+      movies[0].status.blockbaster = true;
+      movies[1].status.blockbaster = true;
+      movies[2].status.blockbaster = true;
+
+      // destructure the title from the latest Movie and rename the varible to firstbook
+
+      const {title: latestMovie} = movies[2]
+
+      console.log(latestMovie);
+
+      //Turn the movies object into a JSON string
+
+      const film = JSON.stringify(movies);
+      console.log(film);
+
+      
+
+
+    </script>
+</body>
+</html>

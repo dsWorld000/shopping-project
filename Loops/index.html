@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops</title>
+</head>
+<style>
+    body{
+        background-color: burlywood;
+        color: rgb(55, 6, 6);
+    }
+</style>
+<body>
+    <h1>Loops</h1>
+
+    <script>
+        // For Loop..
+
+        // for(initialization;condition;iteration){
+        //     //code to be executed...
+        // }
+
+
+        for(let i=0; i<=10; i++){  //initialization let or var se kar skte hai for loop ke aander, var is not block scope
+            console.log(i);
+        };
+//loop through an array        
+        const fruits = ['apple', 'bannana', 'cherry'];
+        for(let i=0; i<fruits.length; i++){
+            console.log(fruits[i])
+        };
+
+ // Eg3..
+        for(let i=1; i<=10; i++){
+            if(i === 7){
+                console.log('7 is my lucky no.')
+            }else{
+            console.log(i)
+            }
+        };
+// Nested loop...
+        for(let i=2; i<=2; i++){
+           // console.log(i)
+            for(let j=1; j<=10; j++){
+                console.log(`${i} x ${j} = ${i*j}`)
+            }
+        };
+//Break & continue...
+        for(let i=0; i<=10; i++){
+            if(i===8){
+                console.log('breaking...')
+                break;
+            }
+            console.log(i)
+        };
+    //continue
+        for(let i=1; i<=10; i++){
+            if(i===3){
+                continue;
+            }
+            console.log(i)
+        };      
+                        
+// while & Do while loop
+         let i=20;
+        while (i<=30) {
+          console.log(i) 
+          i++
+        } 
+// do while loop
+
+//    do {
+//     //execute the code
+//     i++
+//    } while (condition);     
+
+//FizzBuzz Challenge..
+       for(let i=1; i<=100; i++){
+
+
+        if(i % 3 === 0){
+            console.log('fizz');
+        }else if(i % 5 === 0){
+            console.log('buzz')
+        }else{
+            console.log(i);
+        }
+        
+       }
+
+// For of loop..  for of > is commenly used array, iterates over 'value' in iterable obj.
+        const items = ['book', 'chair', 'table','crokery']
+        
+        for(item of items){
+            console.log(item)
+        }
+        //Eg 2..
+        const users = [{name: "rohit"}, {name: "kohli"},{ name: "jadeja"}];
+        for(const user of users ){
+            console.log(user.name)
+        }
+//Loop over map
+        const map = new Map();   
+        map.set('name', 'DS');
+        map.set('age', 23);
+        
+        for(const [key, value] of map){
+                console.log(key, value)
+        }
+// for in loop.... for in > is commenly used object properties, iterates over 'keys' or property name in obj.
+        const person ={
+            name: 'deepak',
+            age: 23
+        }
+        for(const key in person){
+            console.log(key + ":" + person[key])
+        };
+
+
+        //Eg2...
+        const colorObj = {
+            color1: 'red',
+            color2: 'blue',
+            color3: 'yellow',
+            color4: 'green',
+            color5: 'pink'
+        };
+        for (const key in colorObj){
+            console.log(key, colorObj[key]);
+        }
+//Array forEach loop..
+        const ary = [1,2,3,4,5,6,7,8,9,10];
+            ary.forEach((num, index)=>{
+                console.log(`Element at index ${index} : ${num}`)
+           });
+            
+           const socials = [ 'Twitter', 'Facebook', 'Instagram', 'LinkedIn'];
+
+        //    socials.forEach(function(item){
+        //     console.log(item)
+        //    });
+
+        socials.forEach((item, index, arr)=>console.log(`${index} - ${item}, ${arr}`)) //loop shorthand
+
+        function logSocials(social){
+            console.log(social);
+        }
+        socials.forEach(logSocials);
+
+//Array filter loop..
+            // const numbers = [1,2,3,4,5,6,7,8,9,10];
+            // const evenNumbers = numbers.filter((number)=>{
+            //      return number%2 == 0;
+                 
+            // })
+            // console.log(evenNumbers);
+
+//Array map loop...
+        const numbers = [1,2,3,4,5];
+            const doubledNumbers = numbers.map((number)=>{
+                 return number*2;
+                 
+            })
+            console.log(doubledNumbers);
+
+// Array.reduce...
+        const cart = [
+        {id:1, name:"prodect 1", price: 130},
+        {id:2, name:"prodect 2", price: 175},
+        {id:3, name:"prodect 3", price: 150}
+        ];
+        const total = cart.reduce(function(acc, product){
+            return acc + product.price;
+
+        }, 0);
+
+        console.log(total);
+
+//Array method Challenge...
+       //Challenge 1
+        const people = [
+            {
+                fname: 'Virat',
+                lname: 'Kohli',
+                age: 34,
+                email: "vk12335@gmail.com"
+            },
+            {
+                fname: 'rohit',
+                lname: 'sharma',
+                age: 40,
+                email: "rohit12335@gmail.com"
+            },
+            {
+                fname: 'Kl',
+                lname: 'Rahul',
+                age: 30,
+                email: "KL12335@gmail.com"
+            },
+            {
+                fname: 'Ravindra',
+                lname: 'jadeja',
+                age: 27,
+                email: "jaduu12335@gmail.com"
+            }
+        ];
+         
+        const younger = people
+        .filter((person) => person.age < 40)
+        .map((person) => ({
+            name: person.fname +' '+ person.lname,
+            email: person.email
+        }))
+
+           console.log(younger);
+
+    // Challenge 2...
+        const shares = [32, -11, 2, -8, 77];
+        
+        const positiveSum = shares
+        .filter((num) => num > 0)
+        .reduce((acc, cur) => acc + cur, 0)
+
+        console.log(positiveSum);
+
+    //Challenge 3,
+        const words = ['coder', 'programmer', 'developer'];
+        const capitalW = words
+        .map((word) => word[0].toUpperCase() + word.slice(1, word.length));
+        
+        
+        console.log(capitalW);
+              
+    </script>
+</body>
+</html>

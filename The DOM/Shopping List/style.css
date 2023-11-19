@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body, html{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#container{
+    width: 500px;
+    height: 100vh;
+    padding: 35px;
+    /* border: 1px solid #ccc;   */
+}
+header{
+    width: 85%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    /* justify-content: space-evenly; */
+}
+header img{
+    height: 100px;
+    width: 100px;
+    
+}
+.form-input{
+    width: 333px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px 0;
+    margin: 10px 0;
+    font-size: medium;
+    color: #4e4e4e;
+    display: block;
+
+}
+#item-form{
+    width: 333px;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.form-control input{
+  width: 334px;
+  height: 45px;
+  font-size: 17px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #eceaea;
+}
+.form-control button{
+  width: 95px;
+  height: 30px;
+  padding: 5px;
+  margin-top: 20px;
+  background-color: rgb(43, 42, 42);
+  color: azure;
+  border-radius: 4px;
+}
+#item-form p{
+   font-size: large;
+   font-weight: 200;
+   color: #818080;
+   padding-top: 27px;
+    
+}
+#list-items{
+    width: 100%;
+    margin-top: 30px;
+    
+}
+.fruits-chart{
+    /* width: 85%; */
+    display: inline-block;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.fruits-chart li{
+    width: 333px;
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 21px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    margin-bottom: 11px;
+}
+.fruits-chart button{
+    width: 20px;
+    height: 20px;
+    color: red;
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+    
+}
+#bttn{
+    width: 333px;
+    height: 40px;
+    margin-top: 25px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}

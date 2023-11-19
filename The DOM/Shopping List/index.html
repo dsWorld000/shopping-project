@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div id="container">
+    <header>
+        <img src="https://cdn3d.iconscout.com/3d/premium/thumb/order-list-5763046-4833547.png" > <h1>Shopping List</h1>
+    </header>
+    <form id="item-form">
+          <div class="form-control">
+            <input
+            id="item-input" 
+            type="text"
+            class="form-input"
+            name="item"
+            placeholder="Enter Item"
+            />
+          </div>
+          <!-- select input -->
+          <select name="priority" id="priority" class="form-input">
+            <option value="0">Select Priority</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+          </select>
+          <!-- checkbox input -->
+          <input type="checkbox" id="checkbox">Recuring Item
+
+          <div class="form-control">
+            <button type="submit" class="btn">
+                <i class="ri-add-line"></i> Add Item
+            </button>
+          </div>
+          <a href="https://google.com">Google</a>
+
+          <p class=".filter">Filter Items</p>
+    </form>
+  
+
+    <div id="list-items">
+      
+      <ul class="fruits-chart">
+        <li>Apples
+        <button>
+          <i class="ri-close-line"></i>
+        </button>
+       </li>
+       <li>WaterMelon
+        <button>
+          <i class="ri-close-line"></i>
+        </button>
+       </li><li>Cherry
+        <button>
+          <i class="ri-close-line"></i>
+        </button>
+       </li><li>Strawberry
+        <button>
+          <i class="ri-close-line"></i>
+        </button>
+       </li><li>Coconet
+        <button>
+          <i class="ri-close-line"></i>
+        </button>
+       </li>
+    </ul>
+    </div>
+    <button id="bttn">Clear All</button>
+   </div>
+    
+    <!-- <script src="script.js"></script> -->
+    <!-- <script src="cleanDirty.js"></script> -->
+    <!-- <script src="insertEL.js"></script> -->
+    <!-- <script src="ReplaceEL.js"></script> -->
+    <!-- <script src="RemoveEL.js"></script> -->
+    <!-- <script src="events.js"></script> -->
+    <!-- <script src="MouseEV.js"></script> -->
+    <!-- <script src="EVobject.js"></script> -->
+    <!-- <script src="keybordKey.js"></script> -->
+    <!-- <script src="inputEV.js"></script> -->
+    <!-- <script src="FormSubmission.js"></script> -->
+    <!-- <script src="EVbubbling.js"></script> -->
+    <script src="EV-delegation.js"></script>
+</body>
+</html>

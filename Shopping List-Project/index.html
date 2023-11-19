@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping List-project</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="https://cdn3d.iconscout.com/3d/premium/thumb/order-list-5763046-4833547.png" alt="">
+            <h1>Shopping List</h1>
+        </header>
+        <form id="item-form">
+            <div class="form-control">
+                <input 
+                type="text"
+                class="form-input"
+                id="item-input"
+                name="item"
+                placeholder="Enter Item"
+                />
+            </div>
+            <div class="form-control">
+                <button type="submit" class="btn">
+                    <i class="ri-add-line"></i> Add Item
+                </button>
+            </div>
+        </form>
+        <div class="filter">
+            <input 
+            type="text"
+            class="form-input-filter"
+            id="filter"
+            placeholder="Filter Items"
+            />
+        </div>
+        <ul id="item-list" class="items">
+            <!-- <li>
+                Apples
+                <button class="remove-item">
+                    <i class="ri-close-line"></i>
+                </button>
+            </li> 
+            <li>
+                Orange Juice
+                <button class="remove-item">
+                    <i class="ri-close-line"></i>
+                </button>
+            </li>
+            <li>
+                Milk
+                <button class="remove-item">
+                    <i class="ri-close-line"></i>
+                </button>
+            </li>
+            <li>
+                Oreos
+                <button class="remove-item">
+                    <i class="ri-close-line"></i>
+                </button>
+            </li> -->
+            
+        </ul>
+        <button id="clear" class="clearBtn">Clear All</button>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
